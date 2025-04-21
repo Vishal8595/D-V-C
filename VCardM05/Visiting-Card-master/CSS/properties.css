@@ -1,0 +1,321 @@
+﻿ body {background:#ffffff url(../Images/bg.jpg) center top no-repeat; font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#464646;}
+body, fieldset, form, h1, h2, h3, h4, h5, h6, p { margin:0px; padding:0px; }
+
+.FormTop
+{
+    background-color:#4f6228;
+    text-align:center; font-weight:bold;color:white;font-size:large;
+}
+
+.FormBottom
+{
+    background-color:#4f6228;
+    text-align:center; font-weight:bold;color:white;
+}
+
+.FormBottom input[type="text"]
+{
+ width:75px;
+font-family:"Times New Roman", Times, serif;
+font-size:15px;
+color:#ffffff;
+border:solid 1px #fba2a2;
+background-color:transparent; 
+margin-left: 0px;
+height: 18px;
+}
+
+
+.FormBody 
+{
+    background-color:#fde9d9;
+}
+
+#button {
+	width: 60px;
+	margin: 0px;
+}
+	 
+#button a {
+	display: block;
+	color: #036e90;
+	text-decoration: none;
+	background-image: url(../images/side.jpg);
+	padding-top: 5px;
+	padding-bottom: 6px;
+	padding-left: 30px;
+	text-align: left;
+	vertical-align: middle;
+}
+#button a:hover {
+	  background-image: url(../images/side-1.jpg);
+      color: #ca6f16;
+}
+
+#button td {
+	font-size: 11px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+html>body #button a {
+      width: auto;
+      }
+
+.tableborder
+{
+	  border-style:none; 
+	  border-spacing:0px; 
+	  border-width:0px;
+}
+
+.Adm_StdTextbox
+{
+width:75px;
+font-family:"Times New Roman", Times, serif;
+font-size:15px;
+color:#006699;
+border:solid 1px #996633;
+	margin-left: 0px;
+	height: 21px;
+	}
+
+.Adm_StdTextbox10
+{
+width:75px;
+font-family:"Times New Roman", Times, serif;
+font-size:15px;
+color:#006699;
+border:solid 1px #996633;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+
+  .err
+        {
+            width: 450px;
+            height: 40px;
+            text-align: center;
+            font-family: Verdana;
+            font-size: 12px;
+            font-weight: bold;
+            margin: auto;
+            padding: 5px 5px 5px 5px;
+            color: #ff0000;
+            background-color: #f9f9f9;
+            border: solid 1px #cccccc;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            z-index: 1001;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+        }
+        
+        .SaveOk
+        {
+            width: 450px;
+            height: 40px;
+            text-align: center;
+            font-family: Verdana;
+            font-size: 12px;
+            font-weight: bold;
+            margin: auto;
+            padding: 5px 5px 5px 5px;
+            color: #008100;
+            background-color: #F8ED96;
+            border: solid 1px #cccccc;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            z-index: 1001;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+        }
+        
+        .CSSNewStockm
+        {
+            width: 200px;
+            height:150px;
+            text-align: center;
+            font-family: Verdana;
+            font-size: 12px;
+            font-weight:normal;
+            margin: auto;
+            padding: 5px 5px 5px 5px;
+            color: #000000;
+            background-color: #FfbbFf;
+            border: solid 2px #aaaaaa;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            z-index: 1001;
+            position: absolute;
+            top: 100%;
+            left:50%;
+        }
+        
+ #DeleteDv
+        {
+            width: 450px;
+            height: 90px;
+            text-align: center;
+            font-family: Verdana;
+            font-size: 12px;
+            font-weight: bold;
+            margin: auto;
+            padding: 5px 5px 5px 5px;
+            color: #bf0c00;
+            background-color: #F8ED96;
+            border: solid 2px #781527;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            z-index: 1001;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+        }
+ #DeleteDvItem
+        {
+            width: 450px;
+            height: 90px;
+            text-align: center;
+            font-family: Verdana;
+            font-size: 12px;
+            font-weight: bold;
+            margin: auto;
+            padding: 5px 5px 5px 5px;
+            color: #bf0c00;
+            background-color: #F8ED96;
+            border: solid 2px #781527;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            z-index: 1001;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+        }
+
+ .HideObject
+{ 
+	display:none;
+}
+
+.AutoExtender
+        {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: .8em;
+            font-weight: normal;
+            border: solid 1px #006699;
+            line-height: 20px;
+            padding: 10px;
+            background-color: White;
+            margin-left:10px;
+        }
+        .AutoExtenderList
+        {
+            border-bottom: dotted 1px #006699;
+            cursor: pointer;
+            color: Maroon;
+        }
+        .AutoExtenderHighlight
+        {
+            color: White;
+            background-color: #006699;
+            cursor: pointer;
+        }
+        #divwidth
+        {
+          width: 450px !important;    
+        }
+        #divwidth div
+       {
+        width: 450px !important;   
+       }
+        #divwidth1
+        {
+          width: 450px !important;    
+        }
+        #divwidth1 div
+       {
+        width: 450px !important;   
+       }
+        #divwidth2
+        {
+          width: 450px !important;    
+        }
+        #divwidth2 div
+       {
+        width: 450px !important;   
+       }
+
+        #divwidth3
+        {
+          width: 450px !important;    
+        }
+
+        #divwidth3 div
+       {
+        width: 450px !important;   
+       }
+        #divwidth4
+        {
+          width: 450px !important;    
+        }
+
+        #divwidth4 div
+       {
+        width: 450px !important;   
+       }
+
+        #divwidth5
+        {
+          width: 450px !important;    
+        }
+
+        #divwidth5 div
+       {
+        width: 450px !important;   
+       }
+
+        #divwidth6
+        {
+          width: 450px !important;    
+        }
+
+        #divwidth6 div
+       {
+        width: 450px !important;   
+       }
+
+        #divwidth7
+        {
+          width: 450px !important;    
+        }
+
+        #divwidth7 div
+       {
+        width: 450px !important;   
+       }
+             #divwidth8
+        {
+          width: 700px !important;    
+        }
+
+        #divwidth8 div
+       {
+        width: 700px !important;   
+       }
+         
+         #divwidth9
+        {
+          width: 700px !important;    
+        }
+       
+       #divwidth9 div
+       {
+        width: 700px !important;   
+       }
+.uppercase
+{
+    text-transform: uppercase;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          *{margin: 0;}
+        .fl{float: left;}
+        .new{float: left; margin-left: 1%;}
+        .fr{float: right;}
+        .bg1{background-color: aqua;}
+        .bg2{background-color:palevioletred;}
+        .bg3{background-color:red;}
+        .bg4{background-color: yellow;} 
+        .bg5{background-color: green;}
+        .bg6{background-color: aqua;}
+        .bg7{background-color:brown;}
+        .bg8{background-color:navy;}
+        .bg9{background-color: blueviolet;} 
+        .bg10{background-color:purple;}
+        .pad{padding: 1%;}
+        .window{width: 80%; height: 80vh; margin: 10vh auto;}
+        .row{width:32.667%; height:80vh;}
+        .col-1{height:48.9%; margin-bottom: 1vh;}
+        .col1-sub{width:49.5% ; height:48.5%; margin-bottom: 1vh;}
+        .col1-sub1{width:49.5% ; height:98.9%; margin-bottom: 1vh;}
+        /* .col1-sub2{width:49.5; height:47.5; margin-bottom: 1vh;} */
+    </style>
+</head>
+<body>
+    <div class="window pad">
+        <div class="row fl">
+            <div class="col-1 ">
+                <!-- yellow -->
+                <div class="col-1 bg9"></div>
+                <div class="col-1 bg2"></div>
+            </div>
+            <div class="col-1 bg7"></div>
+            <!-- <div class="col-1 bg9"></div> -->
+        </div>
+        <div class="row  new">
+            <div class="col-1 bg8"></div>
+            <div class="col-1 ">
+                <div class="col1-sub bg3 fl"></div>
+                <div class="col1-sub bg4 fr"></div>
+                <div class="col1-sub bg3 fl"></div>
+                <div class="col1-sub bg4 fr"></div>
+            </div>
+        </div>
+        <div class="row  fr">
+            <div class="col-1">
+                <div class="col1-sub1 bg7 fl"></div>
+                <div class="col1-sub bg3 new"></div>
+                <div class="col1-sub bg4 fr"></div>
+            </div>
+            <div class="col-1 ">
+                <div class="col1-sub1 bg3 fl"></div>
+                <div class="col1-sub1 bg5 fr"></div>
+            </div>
+        </div>
+
+    </div>
+         
+</body>
+</html>

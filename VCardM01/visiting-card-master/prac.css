@@ -1,0 +1,32 @@
+.container1{
+    font-size: larger;
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    align-items: center;
+    height: 300px;
+    border: 2px solid;
+    width: 30%;
+    
+}
+
+.item{
+    color:blueviolet;
+    margin: 0px;
+    background-color: antiquewhite;
+    margin: 5px;
+    
+}
+
+
+.container2{
+    font-size: larger;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 300px;
+    border: 2px solid;
+    width: 3    0%;
+    
+}

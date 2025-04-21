@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+ body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .profile-card {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    background-color: hsla(0, 0%, 100%, .7);
+    border-radius: 10px;
+    box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+    width: 500px;
+    max-width: calc(100vw - 15px);
+    }
+  
+  .profile-image {
+    margin-top: -40px;
+    text-align: center;
+} 
+body {
+    background-image: url('https://images.unsplash.com/photo-1569021998480-a68f22f6ba86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    padding: 1px;
+    background-color: #421400;
+    filter: grayscale(50%);
+}
+img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(40%);
+  }
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  display: inline;
+}
+i {
+    color: #421400;
+  }
+.name {
+text-align: center;
+font-size: 44px;
+font-family: Poppins;
+color: #421400;
+}
+.job {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Playfair Display";
+    color: #421400;
+}
+.description {
+    text-align: center;
+    font-size: 22px;
+    font-family: Poppins;
+    color: #421400;
+    border-top: 1px solid #421400;
+    
+}
+.job, .description {
+    margin-top: 5%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+a {
+    color: #421400;
+    font-size: 22px;
+}

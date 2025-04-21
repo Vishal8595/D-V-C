@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Business Card</title>
+    <style>
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+            
+            .fa:hover {
+                opacity: 0.7;
+            }
+            
+            .fa-facebook {
+              background: #3B5998;
+              color: white;
+            }
+            .fa-google {
+                background: #fb351b;
+                color: white;
+            } 
+            .fa-twitter {
+              background: #55ACEE;
+              color: white;
+            }
+            
+            .fa-instagram {
+              background: #f340a8;
+              color: white;
+            }
+            
+            .fa-linkedin {
+              background: #007bb5;
+              color: white;
+            }
+            .fa-whatsapp {
+                background: #0fb500;
+                color: white;
+              }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right, #b4e9fc, #fc681e);
+            text-align: center;            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #card {
+            max-width: 600px;
+            background-image: url('cardBGimg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            padding: 10px 36px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;            
+            border: 5px solid #ffffff;
+        }
+
+        h1, h2 {
+            color: #333333;
+            margin: 5px 10px;
+        }
+
+        p {
+            color: #080808;
+            margin: 8px 0;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff6b6b;
+        }
+
+        #toggleButton {
+            background-color: #ff6b6b;
+            color: #ffffff;
+            border: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        #toggleButton:hover {
+            background-color: #ff8c8c;
+        }
+
+        #hiddenContent {
+            display: none;
+            text-align: left;
+            margin-top: 15px;
+            color: #220d0d;
+        }
+        #hiddenContent p {
+            margin: 5px 0;
+        }        
+    </style>
+</head>
+<body>
+    <div id="card">
+        <img id="avatar" src="rajani.png.jpg">
+        <h1>Rajani</h1>
+        <h2>Frontend Developer</h2>
+        <p>Phone: 7387098273</p>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+            <a href="https://twitter.com" class="fa fa-twitter"></a>
+            <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+            <a href="mailto:youremail@gmail.com" class="fa fa-google"></a>
+            <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+            <a href="https://wa.me/1234567890" class="fa fa-whatsapp"></a>
+        </div>
+        <button id="toggleButton">Show More</button>
+        <div id="hiddenContent">
+            <p>Address: Pimpri Chinchawad College of Engineering,Pune</p>
+            <p>Website: <a href="http://127.0.0.1:5500/portfolio.html" target="_blank">myPortfolio</a></p>
+        </div>                   
+    </div>
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const hiddenContent = document.getElementById('hiddenContent');
+
+        toggleButton.addEventListener('click', () => {
+            hiddenContent.style.display = (hiddenContent.style.display === 'none' || 
+            hiddenContent.style.display === '') ? 'block' : 'none';
+            toggleButton.textContent = (hiddenContent.style.display === 'none') ? 'Show More' : 'Show Less';
+        });
+    </script>
+</body>
+</html>

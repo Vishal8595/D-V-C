@@ -1,0 +1,26 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+.social-links{
+   display: flex;
+   list-style-type:none;
+   justify-content: space-between;
+}
+.social-image{
+  width: 4rem;
+  padding:2rem;
+}   
+.main-container{
+  background-color: aqua;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem;
+  border: solid 1rem lightblue;
+}

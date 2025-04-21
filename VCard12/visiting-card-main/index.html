@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <!-- <script src="https://kit.fontawesome.com/d16af45396.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/d16af45396.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Advisor</title>
+    <style>
+        @keyframes anime {
+            1% {
+                border: solid 4px #fff100;
+            }
+
+            10% {
+                border: solid 4px #ff8c00;
+            }
+
+            20% {
+                border: solid 4px #e81123;
+            }
+
+            30% {
+                border: solid 4px #ec008c;
+            }
+
+            40% {
+                border: solid 4px #68217a;
+            }
+
+            50% {
+                border: solid 4px #00188f;
+            }
+
+            60% {
+                border: solid 4px #00bcf2;
+            }
+
+            70% {
+                border: solid 4px #00b294;
+            }
+
+            80% {
+                border: solid 4px #009e49;
+            }
+
+            90% {
+                border: solid 4px #bad80a;
+            }
+
+            100% {
+                border: solid 4px aqua;
+            }
+        }
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            color: white;
+            /* fonnt-family: monospace; */
+            background-color: rgb(24, 6, 44);
+        }
+        #card {
+            transition: 0.5s;
+            /* height: 240px; */
+            width: 300px;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 30px;
+            background-color: rgb(68, 12, 100);
+        }
+        /* #card:hover {
+            height: 603px;
+        } */
+        #bgi {
+
+            height: 100px;
+            border-radius: 30px 30px 0 0;
+            background-color: blue;
+        }
+        #dp {
+            animation: anime 5s infinite;
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            margin-top: -50px;
+            transition: .7s;
+            /* border: solid 5px blue; */
+            background-color: yellow;
+        }
+        #dp:hover {
+            height: 200px;
+            width: 200px;
+            animation: none;
+            transform: rotate(360deg);
+            border-radius: 50px 5px 50px 5px;
+        }
+        img {
+            height: 100px;
+            width: 300px;
+            border-radius: 30px 30px 0 0 ;
+        }
+
+
+
+
+
+
+        #icons {
+            margin: 20px;
+            font-size: 28px;
+
+        }
+
+        i {
+            transition: .3s;
+            padding: 10px;
+            border-radius: 100px;
+        }
+
+        i:hover {
+            background-color: black;
+            transform: rotate(45deg);
+        }
+
+        a:hover {
+            color: #39A2DB;
+
+            transform: rotate(45deg);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        #name {
+
+            color:#39A2DB;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 7px;
+            border-radius: 15px;
+            background-color:rgb(20, 3, 41)
+        }
+
+        #work {
+            transition: 0.2s;
+            height: 63px;
+            /* height: 300px; */
+            overflow: hidden;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-bottom: 5px;
+            border-radius: 20px;
+            background-color: rgb(20, 3, 41)
+        }
+        #aboutme {
+            margin-top: 20px;
+            transition: 0.2s;
+            /* height: 300px; */
+            height: auto;
+            overflow: hidden;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            /* padding: 7px; */
+            border-radius: 20px;
+            background-color: rgb(20, 3, 41)
+        }
+        #work:hover {
+            height: 230px;
+            /* height: auto; */
+        }
+        h2 {
+            color: #39A2DB;
+        }
+        #icons {
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 5px;
+            border-radius: 100px;
+            background-color:rgb(20, 3, 41)
+        }
+
+        #dad {
+            color: white;
+            font-size: 16px;
+        }
+
+        #maine {
+            color: rgba(0, 255, 0, 0.735);
+        }
+
+        #lomgo {
+            height: 100px;
+            width: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div id="card">
+            <div id="bgi">
+                <img src="https://images.unsplash.com/photo-1642606440166-2bd57032ea92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60" alt="">
+            </div>
+            <img id="dp" src="me.png" alt="">
+            <H2 id="name">Vedansh Singour
+                <br>
+                <span id="dad">S/O Prakash Singour</span>
+            </H2>
+            
+            <div id="work">
+                <h2>Financial Advisor</h2>
+                <!-- <h3>Insurance Agent</h3> -->
+                <h4 style="margin: -5px; margin-top: 3px;">Agent Code  <br>LIC0603337C</h4>
+                <img id="lomgo" src="logo.jpeg" alt="">
+            </div>
+
+            <div id="aboutme">
+                <h2>Services</h2>
+                <p style="text-transform: capitalize"> new policy sales, policy renewal, financial planning, tax saving planning & much more</p>
+                
+            </div>
+            <div id="icons">
+                <a id="maine" href="https://wa.me/919752017952"><i class="fab fa-whatsapp"></i></a>
+                <!-- <a href="https://vedz.w3spaces.com/"> <i class="fas fa-globe"></i> </a> -->
+                <a href="https://instagram.com/vedzansh"> <i class="fab fa-instagram"></i> </a>
+                <a id="maine" href="tel:8319813474"><i class="fas fa-phone-alt"></i></a>
+                <a href="https://mobile.twitter.com/vedzansh"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/vedansh-singour-12ba80201"> <i class="fab fa-linkedin"></i> </a>
+                <!-- <a href="https://vedzansh.github.io/profile-card"><i class="fab fa-github"></i> </a> -->
+                <!-- <a href=""> <i class="fab fa-linkedin"></i> </a> -->
+                <!-- <a href="https://t.me/vedzansh"> <i class="fab fa-telegram"></i> </a> -->
+            </div>
+
+        </div>
+    </center>
+
+    <script>
+        document.getElementById("card").hover();
+    </script>
+
+</body>
+</html>

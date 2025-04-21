@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Visiting Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="cover-photo"></div>
+
+    <div class="card">
+      <div class="card-top-buttons">
+        <button class="icon-btn" onclick="toggleMode()" aria-label="Toggle Theme">
+          <i id="theme-icon" class="fas fa-sun"></i>
+        </button>
+        <a href="info.txt" download class="icon-btn" aria-label="Download Info">
+          <i class="fas fa-download"></i>
+        </a>
+        <button class="icon-btn" onclick="sharePage()" aria-label="Share Page">
+          <i class="fas fa-share-alt"></i>
+        </button>
+      </div>
+
+      <img src="https://i.postimg.cc/sgc2XT10/Save-Tik-co-7456565808102214918-1.jpg" alt="Profile Picture" class="profile-pic" />
+      <h2>Nihab Ali</h2>
+      <p class="title">Anime Lover</p>
+      <p class="about">Anime enthusiast, film lover with a special admiration for Marvel, currently exploring the world of dramas.</p>
+
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i>
++8801930486007</p>
+        <p><i class="fas fa-envelope"></i> nihabcr@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Bheramara, Dhaka, Bangladesh</p>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://github.com/crxnihab" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://anilist.co/user/nihab" target="_blank"><i class="fas fa-dragon"></i></a>
+        <a href="https://discord.gg/PHnf68vE" target="_blank"><i class="fab fa-discord"></i></a>
+      </div>
+
+      <div class="buttons">
+        <a href="tel:+8801930486007" class="btn"><i class="fas fa-phone"></i> Call</a>
+        <a href="mailto:nihabcr@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+
+    <section class="about-section">
+      <h3>About Me</h3>
+      <p>
+        I'm an avid anime enthusiast with a deep appreciation for storytelling in all its forms. My love for cinema naturally led me to the Marvel Cinematic Universe, where action and emotion blend seamlessly. Recently, I’ve ventured into the world of dramas—discovering rich narratives and diverse cultures that continue to expand my creative horizons. Whether it's animated adventures, cinematic thrillers, or heartfelt dramas, I enjoy immersing myself in stories that leave a lasting impression.
+      </p>
+    </section>
+
+    <footer class="footer">
+      Built with love by Nihab — © 2025
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

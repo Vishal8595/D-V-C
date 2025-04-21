@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DESTINY DESIGNS CARD</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="css/reset.min.css" />
+
+    <link rel="stylesheet prefetch" href="css/font-awesome.min.css" />
+    <script src="js/jquery/jquery.min.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        transition: 0.5s ease-in-out;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      html,
+      body {
+        background-color: #220200;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: 500;
+      }
+
+      html h1,
+      body h1 {
+        font-size: 25px;
+        font-weight: 200;
+        color: white;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+
+      html h2,
+      body h2 {
+        font-size: 15px;
+        color: #6b0500;
+      }
+
+      #wrapper {
+        opacity: 0;
+        display: table;
+        height: 100%;
+        width: 100%;
+      }
+
+      #wrapper.loaded {
+        opacity: 1;
+        transition: 2.5s ease-in-out;
+      }
+
+      #wrapper #content {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      #card {
+        height: 400px;
+        width: 300px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        perspective: 600px;
+      }
+
+      #card #front,
+      #card #back {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #card #front {
+        transform: rotateY(0deg);
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      #card #front #arrow {
+        position: absolute;
+        height: 116px;
+        line-height: 50px;
+        font-size: 30px;
+        z-index: 10;
+        bottom: 16px;
+        right: 25px;
+        color: #000;
+        animation: arrowWiggle 1s ease-in-out infinite;
+      }
+
+      #card #front #avatar {
+        width: 145px;
+        height: 145px;
+        top: 47%;
+        left: 47%;
+        margin: -77px 0 0 -57px;
+        border-radius: 0%;
+        /*box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8), 0 4px 5px rgba(107, 5, 0, 0.6), 0 0 50px 50px rgba(255, 255, 255, 0.25);*/
+        background-image: url(2.png);
+        background-size: contain;
+        position: absolute;
+        z-index: 1;
+        background-repeat: no-repeat;
+      }
+
+      #card #front #info-box {
+        height: 100%;
+        width: 300px;
+        position: absolute;
+        display: table;
+        left: 0;
+        bottom: 0;
+        background-image: url(1.png);
+        padding: 18px;
+        background-size: cover;
+      }
+
+      #card #front #social-bar {
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        bottom: 42px;
+        /*left: -8px;*/
+        line-height: 40px;
+        font-size: 21px;
+        text-align: center;
+      }
+
+      #card #front #social-bar a {
+        display: inline-block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 5px;
+        line-height: 18px;
+        border-radius: 5px;
+      }
+
+      #card #back {
+        transform: rotateY(180deg);
+        background-image: url(2.png);
+        display: table;
+        z-index: 2;
+        font-size: 13px;
+        line-height: 20px;
+        padding: 24px;
+        background-size: cover;
+      }
+
+      #card #back .back-info {
+        text-align: left;
+        text-justify: inter-word;
+      }
+
+      #card #back #social-bar {
+        position: absolute;
+        bottom: 55px;
+        left: 35px;
+        line-height: 50px;
+        font-size: 23px;
+        text-align: center;
+      }
+
+      #card #back #social-bar a {
+        display: inline-block;
+        line-height: 18px;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #171616;
+      }
+
+      #card .info {
+        display: table-cell;
+        height: 100%;
+        vertical-align: top;
+        text-align: center;
+      }
+
+      #card.flip #front {
+        transform: rotateY(180deg);
+      }
+
+      #card.flip #back {
+        transform: rotateY(360deg);
+      }
+
+      #background {
+        position: fixed;
+        background-color: black;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      #background #background-image {
+        height: calc(100% + 60px);
+        width: calc(100% + 60px);
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        -webkit-filter: blur(5px);
+        background-image: url(bg.jpg);
+        background-size: cover;
+      }
+
+      @keyframes arrowWiggle {
+        0% {
+          right: 25px;
+        }
+        50% {
+          right: 9px;
+        }
+        100% {
+          right: 25px;
+        }
+      }
+    </style>
+
+    <script src="js/prefixfree.min.js"></script>
+    <style>
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px groove black;
+      }
+
+      .tooltip .tooltiptext {
+        width: 120px;
+        background-color: #ff0000;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 1px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 105%;
+        left: -28px;
+        margin-left: -60px;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: 37px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #ff0000 transparent transparent transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="content">
+        <div id="card">
+          <div id="front">
+            <div id="info-box">
+              <div
+                class="back-info"
+                style="
+                  margin-top: 40px;
+                  font-family: Montserrat;
+                  text-align: center;
+                  font-size: 14px !important;
+                  line-height: 24px;
+                "
+              >
+                <p style="color: #ff0000; line-height: 20px; font-weight: 500">
+                  Yash Vashi
+                </p>
+                <p>
+                  <a
+                    href="tel:+918200606963"
+                    style="color: #171616"
+                    target="_blank"
+                    ><i style="color: #171616" class="fa fa-phone"></i>&nbsp;
+                    +91 82006 06963
+                  </a>
+                </p>
+                <p style="color: #ff0000; line-height: 20px; font-weight: 500">
+                  Vidhi Vashi
+                </p>
+                <p>
+                  <a
+                    href="tel: +917405160200"
+                    style="color: #171616"
+                    target="_blank"
+                    ><i style="color: #171616" class="fa fa-phone"></i>&nbsp;
+                    +91 74051 60200
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <style>
+              .ffa {
+                color: #171616;
+              }
+            </style>
+            <div id="social-bar">
+              <a
+                href="https://www.facebook.com/people/destinydesigns0110/100087049004304/"
+                target="_blank"
+              >
+                <i class="fa fa-facebook ffa"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/destiny.designs0110"
+                target="_blank"
+              >
+                <i class="fa fa-instagram ffa"></i>
+              </a>
+              <a href="mailto:destiny.designs0110@gmail.com" target="_blank">
+                <i class="fa fa-envelope ffa"></i>
+              </a>
+
+              <a href="https://wa.me/918200606963" target="_blank">
+                <i class="fa fa-whatsapp ffa"></i>
+              </a>
+              <a class="tooltip more-info" href="javascript:void">
+                <span class="tooltiptext" style="font-size: 10px"
+                  >Tap here to see backside!</span
+                >
+                <i class="fa fa-undo ffa"></i>
+              </a>
+              <br />
+              <a
+                id="sharethis"
+                href="whatsapp://send?text=You%20can%20see%20my%20Digital%20Business%20Card%20and%20Save%20my%20Number%20from%20given%20below%20link%20https://destinydesigns.netlify.app/"
+                style="
+                  font-size: 12px;
+                  cursor: pointer;
+                  padding: 0px;
+                  margin-top: 10px;
+                  color: #171616;
+                "
+                ><i
+                  class="fa fa-whatsapp ffa"
+                  style="font-size: 15px; color: #ff0000"
+                ></i>
+                Share this on Whatsapp</a
+              >
+
+              <a
+                href="Yash_Vashi.vcf"
+                download
+                title="Save Contact"
+                style="
+                  font-size: 12px;
+                  display: block;
+                  color: #ffffff;
+                  padding: 0px;
+                  margin-top: 0px;
+                "
+              >
+                <i
+                  class="fa fa-save ffa"
+                  style="font-size: 15px; color: #ff0000"
+                ></i>
+                &nbsp;
+                <font color="#171616">Save Contact</font>
+              </a>
+              <script>
+                //                 $("#sharethis").on("click", function () {
+                //                   var txt;
+                //                   var code=+91;
+                //                   var person = prompt("Please Enter number to share:", "");
+                //                   if (person == null || person == "") {
+                //                     alert("Please Enter Mobile Number.");
+                //                   } else if (isNaN(person) || person.length != 10) {
+                //                     alert("Please Enter Only 10 digit Mobile Number.");
+                //                   } else {
+                //                     person=code+person;
+                //                     window.open(
+                //                       "whatsapp://send?text=Hello%20World!",
+                //                       "_BLANK"
+                //                     );
+                //                   }
+                //                 });
+              </script>
+            </div>
+          </div>
+          <div id="back">
+            <style>
+              .back-info i {
+                color: #0178b9;
+                font-size: 17px;
+              }
+
+              .back-info a {
+                color: #71bb44;
+              }
+
+              .bfa {
+                color: #0178b9;
+              }
+              .bfa2 {
+                color: #71bb44;
+              }
+              .bfai {
+                margin-right: 10px;
+                font-size: 22px !important;
+              }
+            </style>
+
+            <div class="back-info" style="font-size: 12px">
+              <br />
+            </div>
+            <div id="social-bar" style="padding-top: 25px">
+              <a href="javascript:void" class="more-info">
+                <i class="fa fa-undo" style="color: #220200"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="background">
+          <div id="background-image"></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

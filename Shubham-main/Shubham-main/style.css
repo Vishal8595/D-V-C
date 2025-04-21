@@ -1,0 +1,57 @@
+body {
+    background-color: #e0f7fa;
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 433px;
+    height: 693px;
+}
+
+.visiting-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.profile-img {
+    width: 130px;
+    border-radius: 50%;
+}
+
+h2 {
+    color: #006064;
+}
+
+p.title {
+    color: #00796b;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-info p {
+    color: #004d40;
+    font-size: 15px;
+}
+
+.social-icons a {
+    color: #004d40;
+    font-size: 22px;
+    margin: 0 8px;
+}
+
+.button {
+    background-color: #00838f;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #00796b;
+}

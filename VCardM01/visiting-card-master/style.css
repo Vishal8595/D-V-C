@@ -1,0 +1,255 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+
+}
+
+p {
+  margin: 0;
+}
+
+.container{
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.main {
+  /* position: absolute; */
+  width: 100%; 
+  box-sizing: border-box;
+  /* padding-left: 25px;
+  padding-right: 25px; */
+  padding: 50px;
+ 
+  /* height: 100vh; */
+  /* align-self: center;  */
+  /* max-width: 100%; */
+  /* Limits the container width to the viewport width */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: end;
+}
+
+.name {
+  font-size: 4rem;
+  /* justify-content: flex-end; */
+  margin: 0;
+  /* margin-top: 5rem; */
+}
+
+.position {
+  justify-content: flex-end;
+
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: end;
+}
+
+.logo {
+  /* width: 10rem; This sets the width of the logo to 10 times the root font size */
+  /* height: auto; This maintains the aspect ratio of the image */
+  max-width: 100%;
+  height: auto
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+
+}
+
+
+.ccb_name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/* .info{
+    /* display: grid; */
+/* margin-top: 8rem;
+    /* margin-left: 8rem; */
+/* margin-right: 8rem; */
+/* display: grid; */
+/* gap: 0.1rem; */
+
+
+.end {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  align-items: center;
+  margin-top: 0rem;
+}
+
+.ccb {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+
+
+/* .ccb,  */
+
+
+.details p {
+  font-size: 1.5rem;
+  /* margin: 1rem; */
+  margin-bottom: 0rem;
+}
+
+.qr_pic {
+  height: 15rem;
+  width: 15rem;
+}
+
+@media only screen and (max-width:1050px) {
+
+  .main {
+    position: absolute;
+    /* width: 100dvw; */
+    /* Sets the width to 100% of the viewport width */
+    height: 100dvh;
+  }
+
+  .ccb {
+    font-size: 2rem;
+  }
+
+  .ccblogo {
+    height: 11 rem;
+    width: 11 rem;
+
+  }
+
+  .qr_pic {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .name {
+    font-size: 2.8rem;
+  }
+
+  .position {
+    font-size: 1.5rem;
+  }
+
+  .details {
+    font-size: 1.5 rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  
+  
+  .main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .postion {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 8rem;
+  }
+
+  .ccb_name {
+    font-size: 1.5rem;
+  }
+
+  .details p {
+    font-size: 1.25rem;
+  }
+
+  .qr_pic {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media only screen and (max-width:425px) {
+  .main {
+    /* margin: 15% 10%; */
+    justify-content: space-evenly;
+    padding: 25px;
+    margin: 0px;
+    align-items: center;
+
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .position {
+    font-size: 1.3rem;
+    /* margin-top: 1rem; */
+  }
+  .container1{
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .end{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .qr_pic {
+    width: 8rem;
+    height: 8rem;
+    }
+
+  .since{
+    font-size: 0.6rem;
+  }
+  .logo {
+    width: auto;
+  }
+
+
+  .logo_container{
+    width: 4rem;
+    height: 4rem;
+    order: 2;  
+    gap:0.25em  
+  }
+
+  .ccb_name, .details p{
+    font-size: 1rem;
+  }
+    /* .ccb_name{
+    font-size: 1.25rem;
+   } */
+}
